@@ -1,0 +1,41 @@
+.nav {
+  display: flex;
+  gap: 45px;
+  overflow-x: auto;
+  width: 100%;
+  text-wrap: nowrap;
+  scrollbar-width: none;
+
+  &__wrapper {
+    position: relative;
+  }
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+
+  &__item:hover {
+    color: #E11C4B;
+    transition: 0.1s ease;
+  }
+
+  &__item--current {
+    color: #E11C4B;
+  }
+
+  &__item--promo {
+    display: flex;
+    gap: 6px;
+  }
+
+  &__icon {
+    width: 18px;
+    height: 18px;
+  }
+}
+
+@media (max-width: 767px) {
+  .nav {
+    gap: 18px;
+  }
+}
