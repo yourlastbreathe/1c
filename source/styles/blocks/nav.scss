@@ -17,6 +17,7 @@
   &__item:hover {
     color: #E11C4B;
     transition: 0.1s ease;
+    cursor: pointer;
   }
 
   &__item--current {

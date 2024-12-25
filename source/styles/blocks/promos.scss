@@ -4,6 +4,10 @@
   margin: 0 auto;
   margin-bottom: 96px;
 
+  &__item:hover {
+    cursor: pointer;
+  }
+
   &__title {
     font-size: 36px;
     line-height: 42px;

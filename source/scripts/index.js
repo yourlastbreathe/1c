@@ -13,7 +13,6 @@ close.addEventListener('click', function () {
 })
 
 
-//scroll button
 
 const leftButton = document.getElementById('scrollToLeft');
 const rightButton = document.getElementById('scrollToRight');
@@ -21,16 +20,14 @@ const nav = document.querySelector('.nav');
 
 rightButton.addEventListener('click', () => {
   nav.scrollBy({
-    left: 50,
+    left: 200,
     behavior: 'smooth',
   });
 
 
-// Показываем кнопку "Влево"
 leftButton.style.visibility = 'visible';
 leftButton.style.opacity = '1';
 
-// Проверяем, достигли ли конца, чтобы скрыть кнопку "Вправо"
 const maxScrollLeft = nav.scrollWidth - nav.clientWidth;
 setTimeout(() => {
   if (nav.scrollLeft >= maxScrollLeft) {
@@ -39,17 +36,14 @@ setTimeout(() => {
 }, 500);
 });
 
-// Скролл влево
 leftButton.addEventListener('click', () => {
 nav.scrollBy({
-  left: -50,
+  left: -200,
   behavior: 'smooth',
 });
 
-// Показываем кнопку "Вправо"
 rightButton.classList.remove('hidden');
 
-// Скрываем кнопку "Влево", если вернулись к началу
 setTimeout(() => {
   if (nav.scrollLeft === 0) {
     leftButton.style.visibility = 'hidden';
